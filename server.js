@@ -28,10 +28,16 @@ app.get('/',(req,res)=>{
 });
 app.get('/about',(req,res)=>{
   res.render('about.hbs',{
-    PageTitle:'about page',
+    PageTitle:'About page',
     currentYear:new Date().getFullYear()
   });
 });
+app.get('/projects',(req,res)=>{
+ res.render('projects.hbs',{
+   PageTitle:'PROJECTS PAGE'
+ });
+});
+
 app.get('/bad',(req,res)=>{
     res.send({error:"bad request"});
 });
